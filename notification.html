@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Notification by Danger Cove</title>
+    <style>
+      * { margin: 0; padding: 0; }
+      body { padding: 10px; background: #222; color: #fff; font-family: Arial; font-size: 14px; }
+      h1 { font-size: 16px; }
+      h1, p { margin: 0.5em 0; }
+      a { color: #eee; }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#close').click(function(e) {
+          e.preventDefault();
+          window.close();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Super awesome HTML notification</h1>
+    <p>You get more flexibilty running an HTML notification, adding any HTML element you want. Even <a href="#" id="close">a link</a> to close it.</p>
+    <p>The maximum size seems to be 300x175 (with borders and everything).</p>
+  </body>
+</html>
+
+

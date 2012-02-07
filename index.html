@@ -1,0 +1,96 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>HTML5 notifications demo by Danger Cove</title>
+  <meta name="description" content="This tiny website demonstrates the use of HTML5 notifications.">
+
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/libs/modernizr-2.5.0.min.js"></script>
+</head>
+<body>
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <header class="container">
+    <h1>HTML5 Notifications</h1>
+  </header>
+  <div id="content" role="main" class="container">
+    <div id="not_supported">
+      <h2>Not supported</h2>
+      <p>Sorry, your browser doesn't support HTML5 Notifications just yet. Currenty Chrome is the only browser that does. They work quite marvelously with the Chrome Extensions.</p>
+    </div>
+    <div id="blocked">
+      <h2>Blocked</h2>
+      <p>Sorry, you've blocked notifications for this page. Copy the url below to your address bar, remove the block and try again :).</p>
+      <input type="text" value="chrome://settings/contentExceptions#notifications">
+    </div>
+    <div id="supported">
+      <section class="needs_support inactive">
+      <h2>Request permission</h2>
+        <p>Notifications are different from regular pop-ups in that they require the user's permission to be shown. This changes everything about how you should treat them.</p>
+        <p>Notice that the request permission dialog only shows after user interaction (e.g. clicking a button). If you're adding this to a Chrome Extension, just add the 'notifications' permission and you're all set.</p>
+        <input id="ask_permission" type="button" value="Ask permission to display notifications">
+      </section>
+      <section class="needs_permission inactive">
+        <h2>Show notification</h2>
+        <p>HTML5 Notifications come in two flavors: plain text and HTML. Plain text allows you to customize a couple of parameters, HTML shows any .html file you want as a notification.</p>
+        <p>The examples below are very simple. I didn't even add a timeout to make them disappear after a set amount of time (which you probably should).</p>
+        <div class="notification_forms clearfix">
+          <div id="plain_notification">
+            <h3>Plain text</h3>
+            <form id="plain_form" action="#" method="post">
+              <fieldset>
+                <label for="plain_icon">Icon/URL (32x32):</label>
+                <input id="plain_icon" name="plain_icon" type="text" value="img/icon.png">
+                <label for="plain_title">Title:</label>
+                <input id="plain_title" name="plain_title" type="text" value="My super awesome notification">
+                <label for="plain_message">Message:</label>
+                <textarea id="plain_message" name="plain_message">Some random message we'd like to show our visitor.</textarea>
+                <input id="plain_submit" name="plain_submit" type="submit" value="Show notification" class="submit">
+                <div id="plain_debug" name="plain_debug" class="debug">Waiting for submit..<br></div>
+              </fieldset>
+            </form>
+          </div>
+          <div id="html_notification">
+            <h3>HTML</h3>
+            <form id="html_form" action="#" method="post">
+              <fieldset>
+                <label for="html_file">File/URL:</label>
+                <input id="html_file" name="html_file" type="text" value="notification.html">
+                <input id="html_submit" name="html_submit" type="submit" value="Show notification" class="submit">
+                <div id="html_debug" name="html_debug" class="debug">Waiting for submit..<br></div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <footer class="container">
+    <p>Created with grog by <a href="http://dangercove.com" target="_blank">Danger Cove</a> in 2012</p>
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    var _gaq=[['_setAccount','UA-27275793-4'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>
