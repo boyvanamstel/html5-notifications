@@ -24,11 +24,12 @@
   <a href="https://github.com/DangerCove/html5-notifications"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
   <header class="container">
     <h1>HTML5 Web Notifications</h1>
+    <p>Read the <a href="http://tumblr.dangercove.com/post/17213260067/html5-web-notifications" target="_blank">accompanying blog post</a> for more insights and references.</p>
   </header>
   <div id="content" role="main" class="container">
     <div id="not_supported">
       <h2>Not supported</h2>
-      <p>Sorry, your browser doesn't support HTML5 Notifications just yet. Currenty Chrome is the only browser that does. They work quite marvelously with the Chrome Extensions.</p>
+      <p>Sorry, your browser doesn't support HTML5 Notifications just yet. Currenty Chrome is the only browser that does.</p>
     </div>
     <div id="blocked">
       <h2>Blocked</h2>
@@ -38,7 +39,7 @@
     <div id="supported">
       <section class="needs_support inactive">
       <h2>Request permission</h2>
-        <p>Notifications are different from regular pop-ups in that they require the user's permission to be shown. This changes everything about how you should treat them.</p>
+        <p>Notifications are different from regular pop-ups in that they require the user's permission to be shown.</p>
         <p>Notice that the request permission dialog only shows after user interaction (e.g. clicking a button). If you're adding this to a Chrome Extension, just add the 'notifications' permission and you're all set.</p>
         <input id="ask_permission" type="button" value="Ask permission to display notifications">
       </section>
@@ -58,7 +59,7 @@
                 <label for="plain_message">Message:</label>
                 <textarea id="plain_message" name="plain_message">Some random message we'd like to show our visitor.</textarea>
                 <input id="plain_submit" name="plain_submit" type="submit" value="Show notification" class="submit">
-                <div id="plain_debug" name="plain_debug" class="debug">Waiting for submit..<br></div>
+                <div id="plain_debug" class="debug">Waiting for submit..<br></div>
               </fieldset>
             </form>
           </div>
@@ -69,7 +70,7 @@
                 <label for="html_file">File/URL:</label>
                 <input id="html_file" name="html_file" type="text" value="notification.html">
                 <input id="html_submit" name="html_submit" type="submit" value="Show notification" class="submit">
-                <div id="html_debug" name="html_debug" class="debug">Waiting for submit..<br></div>
+                <div id="html_debug" class="debug">Waiting for submit..<br></div>
               </fieldset>
             </form>
           </div>
